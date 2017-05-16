@@ -2,7 +2,7 @@
 
   <content><![CDATA[
 
-# ${1:py-GSearch-API}
+# py-GSearch-API
 
 
 
@@ -40,8 +40,8 @@ The other variable is `num` (int value), in order to limit number of max results
 
 So, for using you must type (in your project or in command line):
 
-
-`import gsearch
+`
+import gsearch
 
 query = "YOUR_QUERY"
 lang = "es/en"
@@ -77,8 +77,8 @@ for v in range(1,num_of_articles):
 
 	page_2 = news_dict.get("Page {}".format(u))
 
-	print("Link (news)",u,":",page_2)`
-
+	print("Link (news)",u,":",page_2)
+`
 
 
 ## Contributing

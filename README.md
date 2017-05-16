@@ -41,43 +41,43 @@ The other variable is `num` (int value), in order to limit number of max results
 So, for using you must type (in your project or in command line):
 
 `
-import gsearch
+	import gsearch
 
-query = "YOUR_QUERY"
-lang = "es/en"
-(OPTIONAL) num = 50
-
-
-results = gsearch.search(query=query,lang=lang,(OPTIONAL)num=num) 	# This is for normal search
-
-results_news = gsearch.search_news(query=query,lang=lang,(OPTIONAL)num=num) 	# This is for searching news
-
-# That functions are returning a dictionary and a int value. You must manage them with: results[0] (dictionary) and results[1] (number of pages found)
-
-dictionary = results[0]
-
-num_of_pages = results[1]
+	query = "YOUR_QUERY"
+	lang = "es/en"
+	(OPTIONAL) num = 50
 
 
-news_dict = results_news[0]
+	results = gsearch.search(query=query,lang=lang,(OPTIONAL)num=num) 	// This is for normal search
 
-num_of_articles = results_news[1]
+	results_news = gsearch.search_news(query=query,lang=lang,(OPTIONAL)num=num) 	// This is for searching news
 
-# For getting the values:
+	// That functions are returning a dictionary and a int value. You must manage them with: results[0] (dictionary) and results[1] (number of pages found)
 
-for u in range(1,num_of_pages):
+	dictionary = results[0]
+
+	num_of_pages = results[1]
+
+
+	news_dict = results_news[0]
+
+	num_of_articles = results_news[1]
+
+	// For getting the values:
+
+	for u in range(1,num_of_pages):
 	
-	page = dictionary.get("Page {}".format(u))
+		page = dictionary.get("Page {}".format(u))
 
-	print("Link",u,":",page)
+		print("Link",u,":",page)
 
-# The same for articles:
+	// The same for articles:
 
-for v in range(1,num_of_articles):
+	for v in range(1,num_of_articles):
 
-	page_2 = news_dict.get("Page {}".format(u))
+		page_2 = news_dict.get("Page {}".format(u))
 
-	print("Link (news)",u,":",page_2)
+		print("Link (news)",u,":",page_2)
 `
 
 

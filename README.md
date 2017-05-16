@@ -91,7 +91,7 @@ So, for using you must type (in your project or in command line):
 
 3. Help me with issues
 
-4. Check my bot and my other proyects (Telegram --> @dwnmp3Bot // https://github.com/Javinator9889/telegram-yt_mp3-bot/issues)
+4. Check my bot and my other proyects (Telegram --> @dwnmp3Bot // https://github.com/Javinator9889/telegram-yt_mp3-bot/)
 
 
 

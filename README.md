@@ -1,6 +1,6 @@
 <snippet>
 
-  <content><![CDATA[
+  <content>
 
 # py-GSearch-API
 

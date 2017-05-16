@@ -41,7 +41,7 @@ The other variable is `num` (int value), in order to limit number of max results
 So, for using you must type (in your project or in command line):
 
 
-	`import gsearch
+	import gsearch
 
 	query = "YOUR_QUERY"
 	lang = "es/en"
@@ -120,6 +120,5 @@ Also you can go to my GitHub profile and send me direct message.
 
 </content>
 
-  <tabTrigger>readme</tabTrigger>
 
 </snippet>

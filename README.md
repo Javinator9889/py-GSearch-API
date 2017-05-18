@@ -20,7 +20,7 @@ For installing, you can:
 
 2. Although, you can use `pip` for installing, just typing `pip install py-GSearch-API`
 
-3. Go to `https://pypi.python.org/pypi/py-GSearch-API` for seeing package details and versions available
+3. Go to https://pypi.python.org/pypi/py-GSearch-API for seeing package details and versions available
 
 ## Usage
 

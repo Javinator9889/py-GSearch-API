@@ -67,7 +67,7 @@ def search_news(**kwargs):
                 except AttributeError:
                     final_url = obtained_url
 
-            if 'play.google' in final_url or 'google.com' in final_url or 'youtube.com' in final_url or 'mail.google' in final_url or 'drive.google' in final_url or 'google.es' in final_url or '/preferences' in final_url or 'accounts.google.com' in final_url or '/search' in final_url or '/webhp' in final_url or 'maps.google' in final_url or '/support' in final_url or '/tools' in final_url or final_url == '/' or '/intl' in final_url or '/services' in final_url or '/advanced' in final_url or '/language' in final_url:
+            if 'play.google' in final_url or 'google.com' in final_url or 'youtube.com' in final_url or 'mail.google' in final_url or 'drive.google' in final_url or 'google.es' in final_url or '/preferences' in final_url or 'accounts.google.com' in final_url or '/search' in final_url or '/webhp' in final_url or 'maps.google' in final_url or '/support' in final_url or '/tools' in final_url or final_url == '/' or '/intl' in final_url or '/services' in final_url or '/advanced' in final_url or '/language' in final_url or 'abogacia.es' in final_url:
                 final_url = None
             if final_url is None:
                 i = i

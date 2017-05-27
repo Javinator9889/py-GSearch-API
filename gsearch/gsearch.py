@@ -1,19 +1,13 @@
 try:
     import requests as rq
-except (ImportError,ModuleNotFoundError):
+except (ImportError, ModuleNotFoundError):
     print("\'requests\' module not found. Try with \'pip install requests\'")
 
 
 try:
     from bs4 import BeautifulSoup
-except (ImportError,ModuleNotFoundError):
+except (ImportError, ModuleNotFoundError):
     print("\'bs4\' module not found. Try with \'pip install beautifulsoup4\'")
-
-
-try:
-    import ujson as json
-except (ImportError,ModuleNotFoundError):
-    print("\'ujson\' module not found. Try with \'pip install ujson\'")
 
 
 import re
@@ -36,7 +30,7 @@ def search_news(**kwargs):
 
         if query is not None:
             query_string = str(query)
-            query = query_string.replace(" ","+")
+            query = query_string.replace(" ", "+")
         else:
             raise TypeError("Search query ('query') must be given")
 
@@ -45,7 +39,7 @@ def search_news(**kwargs):
         else:
             num = int(num)
 
-        url = "https://www.google.{}/search?hl={}&tbm=nws&as_q={}&as_occt=any&as_drrb=b&tbs=cdr:1,cd_min:3/1/13,cd_max:3/2/13&authuser=0&gws_rd=cr&ei=-WgYWaPQO8TtaoTTiegE#q={}&hl={}&authuser=0&tbas=0&tbm=nws&tbs=qdr:d&spf=1494771990488".format(address,lang,query,query,lang)
+        url = "https://www.google.{}/search?hl={}&as_q={}&authuser=0&tbas=0&tbm=nws&tbs=qdr:d".format(address, lang, query)
         open_url = rq.get(url)
         data = open_url.content
         html = BeautifulSoup(data, "lxml")
@@ -79,7 +73,7 @@ def search_news(**kwargs):
         search_results = {}
         a = 1
         for k,y in beta_dict.items():
-            if y not in search_results.values() and a<=num:
+            if y not in search_results.values() and a <= num:
                 current_num = str(a)
                 key = "Page {}".format(current_num)
                 search_results[key] = y
@@ -107,7 +101,7 @@ def search(**kwargs):
 
         if query is not None:
             query_string = str(query)
-            query = query_string.replace(" ","+")
+            query = query_string.replace(" ", "+")
         else:
             raise TypeError("Search query ('query') must be given")
 
@@ -116,7 +110,7 @@ def search(**kwargs):
         else:
             num = int(num)
 
-        url = "http://www.google.{}/search?hl={}&q={}&meta=".format(address,lang,query)
+        url = "http://www.google.{}/search?hl={}&q={}&meta=".format(address, lang, query)
         open_url = rq.get(url)
         data = open_url.content
         html = BeautifulSoup(data, "lxml")

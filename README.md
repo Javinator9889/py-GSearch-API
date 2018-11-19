@@ -8,7 +8,11 @@
 
 This is a simple library/API for browsing the web, using the Google search engine, obtaining the URLs of the found pages
 
+--------------------------------
 
+### THIS LIBRARY IS UNATTENDED NOW - PLEASE, MIGRATE TO [pyGle](https://github.com/Javinator9889/pyGle)
+
+--------------------------------
 
 ## Installation
 
